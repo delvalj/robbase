@@ -1,13 +1,6 @@
 <template>
-<p> PEPEPEPEPEPs</p>
-<p> 45</p>
-<p> || </p>
-<p> sa</p>
-<p> PEPEPEPEPEPs</p>
-<p> PEPEPEPEPEPs</p>
-<p> PEPEPEPEPEPs</p>
-<p> PEPEPEPEPEPs</p>
-</template>
+<p> 48 States i Get it In</p>
+
 
 <script>
 export default {
