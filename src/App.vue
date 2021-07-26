@@ -1,34 +1,18 @@
 <template>
   <div class="container">
-  <section id="1" style="background-color: red">
+  <section v-for="choice in choices"
+           :key="choice.id"
+           :id="choice.id"
+           :style="{'background-color':choice.background}">
     <div class="choice">
-      <div class="question">ARE YOU FRANK ZAPPA?</div>
-      <a href="#2">YES</a>
-      <a href="#">NO</a>
-    </div>
-  </section>
+      <div class="question">{{choice.question}}</div>
+      <a v-for="link in choice.links"
+         :key="link"
+         :href="link.href"
+         :style="{ color:choice.background }" >
+         {{ link.label }}
 
-  <section id="2" style="background-color: black">
-    <div class="choice">
-      <div class="question">ARE YOU FRANK ZAPPA?</div>
-      <a href="">YES</a>
-      <a href="">NO</a>
-    </div>
-  </section>
-
-  <section style="background-color: yellow">
-    <div class="choice">
-      <div class="question">ARE YOU FRANK ZAPPA?</div>
-      <a href="">YES</a>
-      <a href="">NO</a>
-    </div>
-  </section>
-
-  <section style="background-color: green">
-    <div class="choice">
-      <div class="question">ARE YOU FRANK ZAPPA?</div>
-      <a href="">YES</a>
-      <a href="">NO</a>
+      </a>
     </div>
   </section>
 
@@ -37,7 +21,62 @@
 
 <script>
 
-export default {};
+export default {
+  data(){
+    return{
+      choices:[
+        {
+          id: 1,
+          question: "Are you the best guitarist ever?",
+          links: [
+            {href: "#3", label: "Yes" },
+            {href: "#5", label: "No" },
+          ],
+          background: "#1B264F"
+        },
+        {
+          id: 2,
+          question: "Do you have the coolest mustache?",
+          links: [
+            {href: "#4", label: "Yes" },
+            {href: "#5", label: "No" },
+          ],
+          background: "#FF5F45"
+        },{
+          id: 3,
+          question: "Girl, you thought he was a man, But he was a muffin?",
+          links: [
+            {href: "#2", label: "Yes" },
+            {href: "#5", label: "No" },
+          ],
+          background: "#D98324"
+        },{
+          id: 4,
+          question: "Moving to Montana soon?",
+          links: [
+            {href: "#6", label: "Yes" },
+            {href: "#5", label: "No" },
+          ],
+          background: "#A40606"
+        },{
+          id: 5,
+          question: "So... you are not Frank Zappa",
+          links: [
+            {href: "#1", label: "Nope...." },
+          ],
+          background: "#D7CF07"
+        },{
+          id: 6,
+          question: "Then You Are FRANK ZAPPA",
+          links: [
+            {href: "https://www.youtube.com/watch?v=_q0nImsfMvE", label: "HELL YES" },
+          ],
+          background: "#230007"
+        },
+      ]
+    }
+  }
+};
 </script>
 
 <style>
@@ -45,7 +84,9 @@ export default {};
 *{
   box-sizing: border-box;
 }
-html{}
+html{
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
   padding: 0;
