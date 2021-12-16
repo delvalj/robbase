@@ -115,7 +115,6 @@ section{
 .choice a  {
   color: black;
   font-size: 20px;
-  padding-right: 20px;
   font-family: "Zen Tokyo Zoo",serif;
   background-color: whitesmoke;
   margin: 5px;
