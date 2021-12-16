@@ -6,6 +6,10 @@ In this small project you'll have to answer some questions.
 Are u the muffin men? Go check it out ... 
 ```
 
+##Getting Started
+Cloning the Project:
+git clone <https://github.com/delvalj/robbase.git>
+
 ## Project setup
 ```
 npm install
@@ -41,6 +45,9 @@ firebase init
 firebase deploy
 ```
 
-### 
-Built With
+### Built With
 [VUE.JS 3] https://v3.vuejs.org/
+
+
+### Authors
+Joaquin del Val - Initial work - [delvalj] https://github.com/delvalj
