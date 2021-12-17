@@ -3,7 +3,7 @@
 ## Description
 ```
 In this small project you'll have to answer some questions.
-Are u the muffin men? Go check it out ... 
+Are u the muffin man? Go check it out ... 
 ```
 
 ## Getting Started
